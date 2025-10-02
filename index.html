@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swadeshi Fitness & Sports - Student innovation project supporting Atmanirbhar Bharat with Made in India fitness solutions including AI Coach App, Fit India Band, Smart Mallakhamb and Eco-Fit gym machines.">
+    <meta name="keywords" content="Swadeshi fitness, Made in India sports gear, AI fitness app India, student innovation, Atmanirbhar Bharat, affordable fitness equipment">
+    <title>Swadeshi Fitness & Sports | Made in India for Atmanirbhar Bharat</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Analytics (placeholder) -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <style>
+        :root {
+            --saffron: #FF9933;
+            --green: #138808;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --dark-gray: #343A40;
+            --medium-gray: #6C757D;
+            --light-green: #E8F5E9;
+            --light-saffron: #FFF3E0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--dark-gray);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background-color: var(--saffron);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: #e68a2e;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: var(--green);
+            color: var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #107007;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(19, 136, 8, 0.3);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--saffron);
+            color: var(--saffron);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--saffron);
+            color: var(--white);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--saffron);
+            border-radius: 2px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dark-gray);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--saffron);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--light-saffron) 0%, var(--light-green) 100%);
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark-gray);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--medium-gray);
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        /* Product Highlights */
+        .product-highlights {
+            background-color: var(--white);
+            padding: 60px 0;
+        }
+        
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .highlight-card {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .highlight-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--saffron) 0%, var(--green) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 28px;
+        }
+        
+        .highlight-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .heritage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .heritage-item {
+            text-align: center;
+            padding: 25px 15px;
+            border-radius: 15px;
+            background: var(--light-gray);
+        }
+        
+        .heritage-icon {
+            font-size: 2.5rem;
+            color: var(--saffron);
+            margin-bottom: 15px;
+        }
+        
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 200px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--saffron);
+        }
+        
+        .product-content {
+            padding: 25px;
+        }
+        
+        .product-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .features-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .features-list li i {
+            color: var(--green);
+            margin-right: 10px;
+        }
+        
+        /* App Section */
+        .app-section {
+            background: linear-gradient(135deg, var(--light-saffron) 0%, var(--light-green) 100%);
+        }
+        
+        .app-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .app-text {
+            flex: 1;
+        }
+        
+        .app-screenshots {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .screenshot {
+            flex: 1;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .screenshot img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .signup-form {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        /* Impact Section */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .impact-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: var(--light-gray);
+        }
+        
+        .impact-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--saffron) 0%, var(--green) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 32px;
+        }
+        
+        .impact-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .blog-img {
+            height: 200px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--saffron);
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .blog-content h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--saffron);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .newsletter {
+            margin-top: 30px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            margin-top: 15px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px 0 0 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .newsletter-form button {
+            padding: 12px 20px;
+            background: var(--green);
+            color: white;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--saffron);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--saffron);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #495057;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--light-gray);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .testimonial {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--saffron);
+            opacity: 0.2;
+            font-family: serif;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--saffron);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content, .app-content, .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-image, .about-image {
+                order: -1;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                background: var(--white);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                margin-bottom: 40px;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 8px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Swadeshi<span>Fitness</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#app">AI Coach App</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Swadeshi Fitness Solutions — Made in India for Atmanirbhar Bharat</h1>
+                    <p>Student innovators creating affordable, sustainable fitness tech that blends India's rich heritage with cutting-edge AI. Join the movement to make fitness accessible to every Bharatiya!</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-primary">Request Demo</a>
+                        <a href="#app" class="btn btn-secondary">Join Beta</a>
+                        <a href="#about" class="btn btn-outline">Know More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" alt="Youth practicing fitness with Indian elements">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Highlights -->
+    <section class="product-highlights">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Swadeshi Solutions</h2>
+                <p>Designed for Bharat, by Bharatiya Students</p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Fit India Band</h3>
+                    <p>Affordable health tracker with Ayurvedic wellness insights</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Eco-Fit Machines</h3>
+                    <p>Gym equipment made from recycled materials</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>AI Coach App</h3>
+                    <p>Personalized workouts with Hindi/English voice guidance</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Smart Mallakhamb</h3>
+                    <p>Traditional pole with sensor tech for posture correction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonial">
+                <p>"Made in India. Powered by Students. This is how Atmanirbhar Bharat becomes a reality!"</p>
+                <div class="testimonial-author">- Dr. Rajiv Mehta, Fitness Expert</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Swadeshi Fitness</h2>
+                <p>Our Mission & Heritage</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>At Swadeshi Fitness, we're on a mission to make fitness accessible, affordable, and culturally relevant for every Indian. By combining India's rich fitness heritage with modern technology, we're creating solutions that resonate with Bharatiya values while addressing contemporary health challenges.</p>
+                    <p>As student innovators, we believe in the power of Atmanirbhar Bharat - not just as a slogan, but as a practical approach to solving real problems with indigenous solutions.</p>
+                    
+                    <h3 style="margin-top: 30px;">Our Team</h3>
+                    <p>We're a passionate team of engineering and design students from IITs, NITs, and state universities across India. What unites us is our belief that India's fitness future should be built on our own soil, with our own hands.</p>
+                    
+                    <div class="heritage-grid">
+                        <div class="heritage-item">
+                            <div class="heritage-icon">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <h4>Yoga</h4>
+                            <p>5000+ years of holistic wellness tradition</p>
+                        </div>
+                        <div class="heritage-item">
+                            <div class="heritage-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>Ayurveda</h4>
+                            <p>Science of life and natural healing</p>
+                        </div>
+                        <div class="heritage-item">
+                            <div class="heritage-icon">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <h4>Desi Khel</h4>
+                            <p>Kabaddi, Kho-Kho, Mallakhamb & more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" alt="Traditional Indian fitness practices">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Prototypes</h2>
+                <p>Innovative Swadeshi Fitness Solutions</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Fit India Band</h3>
+                        <p>Our affordable health tracker with 7-day battery life, heart rate monitoring, and Ayurvedic wellness insights.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check-circle"></i> Made with recycled materials</li>
+                            <li><i class="fas fa-check-circle"></i> Hindi/English voice alerts</li>
+                            <li><i class="fas fa-check-circle"></i> Under ₹1,499</li>
+                            <li><i class="fas fa-check-circle"></i> Bharat-made sensors</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Smart Mallakhamb</h3>
+                        <p>Traditional wooden pole with embedded sensors that provide real-time posture correction and performance analytics.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check-circle"></i> Teak wood from sustainable sources</li>
+                            <li><i class="fas fa-check-circle"></i> Bluetooth connectivity</li>
+                            <li><i class="fas fa-check-circle"></i> Works with AI Coach App</li>
+                            <li><i class="fas fa-check-circle"></i> Preserves Indian heritage</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Eco-Fit Cycle</h3>
+                        <p>Stationary bicycle made from recycled plastic and scrap metal, generating electricity while you workout!</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check-circle"></i> 80% recycled materials</li>
+                            <li><i class="fas fa-check-circle"></i> Powers your phone/lights</li>
+                            <li><i class="fas fa-check-circle"></i> Low maintenance design</li>
+                            <li><i class="fas fa-check-circle"></i> Made in local workshops</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>AI Coach App</h3>
+                        <p>Personal fitness coach in your pocket with voice guidance in 8 Indian languages and culturally relevant workouts.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check-circle"></i> Yoga, Surya Namaskar routines</li>
+                            <li><i class="fas fa-check-circle"></i> Desi khel inspired workouts</li>
+                            <li><i class="fas fa-check-circle"></i> Offline functionality</li>
+                            <li><i class="fas fa-check-circle"></i> Community challenges</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Coach App Section -->
+    <section class="app-section" id="app">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI Coach App</h2>
+                <p>Your Personal Swadeshi Fitness Guide</p>
+            </div>
+            <div class="app-content">
+                <div class="app-text">
+                    <h3>Train Smarter with Bharatiya Wisdom</h3>
+                    <p>Our AI Coach App combines cutting-edge technology with India's ancient fitness knowledge. Get personalized workout plans that include yoga asanas, traditional exercises, and modern training - all tailored to your goals and schedule.</p>
+                    <p>Available in Hindi, English, Tamil, Telugu, Marathi, Bengali, Gujarati, and Punjabi!</p>
+                    
+                    <div class="signup-form">
+                        <h4>Join Our Beta Program</h4>
+                        <form id="betaSignup">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="Enter your phone number">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Get Early Access</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="app-screenshots">
+                    <div class="screenshot">
+                        <img src="https://images.unsplash.com/photo-1551817958-77ca085601f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=500&q=80" alt="App Dashboard">
+                    </div>
+                    <div class="screenshot">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=500&q=80" alt="Workout Screen">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact" id="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Impact</h2>
+                <p>Building a Fitter, Stronger, Atmanirbhar Bharat</p>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Economic</h3>
+                    <p>Creating local manufacturing jobs and reducing import dependency. Our supply chain supports 50+ MSMEs across India.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Social</h3>
+                    <p>Making fitness accessible to tier 2/3 cities and rural areas with affordable pricing and vernacular support.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Cultural</h3>
+                    <p>Reviving traditional Indian fitness practices and integrating them into modern lifestyles.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Environmental</h3>
+                    <p>Using recycled materials and sustainable manufacturing processes to reduce our carbon footprint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Updates</h2>
+                <p>News from the Swadeshi Fitness Movement</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> June 15, 2023</span>
+                            <span><i class="far fa-user"></i> Team Swadeshi</span>
+                        </div>
+                        <h3>How We Built the Smart Mallakhamb</h3>
+                        <p>Discover the engineering challenges and cultural insights behind our innovative take on India's traditional fitness pole.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> May 28, 2023</span>
+                            <span><i class="far fa-user"></i> Priya Sharma</span>
+                        </div>
+                        <h3>Winning the National Innovation Challenge</h3>
+                        <p>Our journey from college project to national recognition and how it's accelerating our mission.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> May 10, 2023</span>
+                            <span><i class="far fa-user"></i> Team Swadeshi</span>
+                        </div>
+                        <h3>Partnering with Rural Schools</h3>
+                        <p>How we're bringing affordable fitness solutions to government schools across Maharashtra and Karnataka.</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 15px;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Let's build Atmanirbhar Bharat together!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactOrg">Organization</label>
+                            <input type="text" id="contactOrg" placeholder="Your organization (optional)">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Connect With Us</h3>
+                    <p>We'd love to hear from students, investors, fitness enthusiasts, and partners who believe in our vision!</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h4>Stay Updated</h4>
+                        <p>Subscribe to our newsletter for product updates and fitness tips</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Swadeshi Fitness</h3>
+                    <p>Made in India for Atmanirbhar Bharat. Student innovation creating affordable, sustainable fitness solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#app">AI Coach App</a></li>
+                        <li><a href="#impact">Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Download Brochure</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> hello@swadeshifitness.in</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> IIT Delhi, Hauz Khas, New Delhi</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Swadeshi Fitness & Sports. All rights reserved. | <a href="#" style="color: #adb5bd;">Privacy Policy</a> | <a href="#" style="color: #adb5bd;">Terms of Service</a></p>
+                <p>Made with ❤️ by Student Innovators for Atmanirbhar Bharat</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                navLinks.classList.remove('active');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form Submissions
+        document.getElementById('betaSignup').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for joining our beta program! We will contact you soon.');
+            this.reset();
+        });
+        
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        
+        // Newsletter Signup
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
